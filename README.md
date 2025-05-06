@@ -12,7 +12,7 @@ This is just the Backend part, there are three Endpoints:
 3. Retrieve all users
 4. Get Lead by Service Type
 
-Get All Leads can be coded using the front end. (Consolidate per Service Type calling the same getLead(svcType) endpoint.
+Get All Leads can be coded using the front end. (Consolidate per Service Type calling the same getLead(svcType) endpoint.)
 
 This is following a Model and Controller Framework.
 
