@@ -30,7 +30,7 @@ export class UserController {
         res.json(record);
   };
 
-private getLead= (req: Request, res: Response) => {
+private getLead = (req: Request, res: Response) => {
     const svcType = req.params.svcType;
     const records = this.users;
 const maxLead = records.filter(record => record.svcType == svcType).length;
