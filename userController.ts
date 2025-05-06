@@ -15,6 +15,8 @@ export class UserController {
   private initializeRoutes() {
     this.router.get('/', this.getAllUsers);
     this.router.get('/id', this.getUser);
+    this.router.getLead('/svcType', this.getLead);
+
     this.router.post('/', this.createUser);
   }
 
@@ -26,6 +28,13 @@ export class UserController {
     const id = req.params.id;
     const record = this.users.find((record) => record.id === id);
         res.json(record);
+  };
+
+private getLead= (req: Request, res: Response) => {
+    const svcType = req.params.svcType;
+    const records = this.users;
+const maxLead = records.filter(record => record.svcType == svcType).length;
+        res.json(maxLead);
   };
 
 
